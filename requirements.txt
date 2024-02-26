@@ -4,4 +4,4 @@ facenet-pytorch
 torch
 opencv-python
 grad-cam
-flask
+fastapi
