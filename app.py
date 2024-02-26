@@ -34,6 +34,10 @@ model.load_state_dict(checkpoint['model_state_dict'])
 model.to(DEVICE)
 model.eval()
 
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to DeepFake Detection API"}
+
 @app.post("/predict/")
 async def predict(image: UploadFile = File(...), true_label: str = Form(...)):
     try:
